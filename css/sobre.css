@@ -1,0 +1,220 @@
+body {
+    color: #333333;
+    font-family: 'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 940px; /* Alterado para largura máxima */
+    width: 100%; /* Alterado para 100% */
+    padding: 0 20px; /* Adicionado um espaçamento interno */
+    box-sizing: border-box; /* Garante que padding não aumente a largura do corpo */
+}
+
+h1 {
+    background-image: url(../img/sobre-background.jpg);
+    padding: 10px;
+}
+
+h1 + p{
+    text-indent: 0;
+}
+
+h2 {
+    border-bottom: 2px solid #333333;
+    margin-top: 30px;
+}
+
+p {
+    padding: 0 15px; /* Alterado para um valor menor */
+    text-indent: 15px;
+}
+
+p::first-letter{
+    font-weight: bold;
+}
+
+p::first-line{
+    font-variant: small-caps;
+}
+
+h3 {
+    background-color: #F2EDED;
+}
+
+figure {
+    background-color: #F2EDED;
+    border: 1px solid #ccc;
+    text-align: center;
+    padding: 15px;
+    margin: 30px;
+}
+
+figcaption {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+#centro-distribuicao {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 550px; /* Alterado para largura máxima */
+    width: 100%; /* Alterado para 100% */
+}
+
+#rodape {
+    color: #777;
+    margin: 30px 0;
+    padding: 30px 0;
+}
+
+#rodape img {
+    margin-right: 15px; /* Alterado para um valor menor */
+    vertical-align: middle;
+    width: 64px; /* Redimensionado para ser mais responsivo */
+}
+
+#familia-pelho {
+    float: none; /* Alterado para remover o flutuador */
+    margin: 0 auto; /* Centralizado horizontalmente */
+}
+
+.sacola {
+    background-image: url(../img/sacola.png);
+    background-repeat: no-repeat;
+    background-position: top right;
+    font-size: 14px;
+    padding-right: 20px; /* Alterado para um valor menor */
+    text-align: right;
+    width: 120px; /* Alterado para ser mais responsivo */
+    padding-top: 8px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: grid;
+    margin: auto;
+    height: 5vh;
+    flex-wrap: wrap;
+    flex-direction: row;
+    
+}
+
+.menu-opcoes ul {
+    font-size: 15px;
+}
+
+.menu-opcoes a {
+    color:  #003366;
+} 
+
+.menu-opcoes ul li {
+    display: inline-flex;
+    float: inline-end;
+    position: relative;
+   text-align:right;
+    margin-left: 10px; /* Alterado para um valor menor */
+}
+
+.container {
+    max-width: 1200px; /* Definindo uma largura máxima */
+    margin: 0 auto;
+    padding: 0 20px; /* Adicionando um espaçamento interno */
+    display: flex;
+    justify-content: space-between; /* Distribui os itens igualmente */
+    align-items: center;
+}
+
+header {
+    
+    position: relative;
+}
+
+.menu-opcoes {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    
+}
+
+footer {
+    background-image: url(../img/fundo-rodape.png);
+    clear: both;
+    padding: 20px 0;
+}
+
+footer .container {
+    position: relative;
+}
+
+.social {
+    position: absolute;
+    top: 8px;
+    right: 0;
+}
+
+.social a {
+    height: 32px;
+    width: 32px;
+    display: block;
+    text-indent: -9999px;
+}
+
+.social a[href*="facebook.com"] {
+    background-image: url(../img/facebook.png);
+}
+
+.social a[href*="twitter.com"] {
+    background-image: url(../img/twitter.png);
+}
+
+.social a[href*="plus.google.com"] {
+    background-image: url(../img/googleplus.png);
+}
+
+.social li{
+    float: left;
+    margin-left: 10px; /* Alterado para um valor menor */
+}
+
+:not(p) + p::first-line {
+    font-variant: small-caps;
+}
+
+/* Estilos para telas menores que 768px */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 10px; /* Reduzindo o espaçamento interno */
+    }
+
+    .container {
+        width: 90%; /* Reduz a largura para telas menores */
+    }
+
+    #centro-distribuicao {
+        max-width: 100%; /* Ajustando para 100% */
+    }
+
+    #familia-pelho {
+        width: 100%; /* Ajustando para 100% */
+        margin: 0; /* Removendo a margem */
+        float: none; /* Removendo o flutuador */
+    }
+
+    footer .container img {
+        width: 50px; /* Redimensionando a imagem do rodapé */
+    }
+}
+
+/* Estilos para telas menores que 576px */
+@media screen and (max-width: 576px) {
+    .container {
+        width: 95%; /* Reduz ainda mais a largura para telas muito pequenas */
+    }
+
+    .sacola {
+        padding-right: 10px; /* Reduzindo o padding direito */
+        width: 100px; /* Ajustando para 100px */
+    }
+
+    #rodape img {
+        width: 40px; /* Redimensionando ainda mais a imagem do rodapé */
+    }
+}
