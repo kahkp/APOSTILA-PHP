@@ -61,213 +61,25 @@
       <section class="painel novidades">
         <h2>Novidades</h2>
         <ol>
-          <!-- primeiro produto-->
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura1.png" alt="miniatura1" />
-                <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <!-- fim do primeiro produto-->
+          <!-- primeiro produto, modificado com php-->
+          <?php 
+          $conexao = mysqli_connect("127.0.0.1", "root", "", "wd43");
+          $dados = mysqli_query($conexao, "SELECT * FROM produtos");
 
-          <!-- coloque mais produtos aqui! -->
+          while ($produto = mysqli_fetch_array($dados)):
+          ?>
           <li>
-            <a href="produto.html">
+            <a href="produto.php?id=<?= $produto['id'] ?>">
               <figure>
-                <img src="img/produtos/miniatura2.png" alt="miniatura2" />
-                <figcaption>Camiseta Bad to the bone por R$ 35,00</figcaption>
+                <img src="img/produtos/miniatura<?= $produto['id'] ?>.png" alt="<?= $produto['nome'] ?>" />
+                <figcaption>
+                  <?= $produto['nome'] ?> por  <?= $produto['preco'] ?>
+                </figcaption>
               </figure>
             </a>
           </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura3.png" alt="miniatura3" />
-                <figcaption>Cardigan por R$ 69,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura4.png" alt="miniatura4" />
-                <figcaption>Jaqueta de inverno por R$ 159,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura5.png" alt="miniatura5" />
-                <figcaption>Regata azul academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura6.png" alt="miniatura6" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura7.png" alt="miniatura7" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura8.png" alt="miniatura8" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura9.png" alt="miniatura9" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura10.png" alt="miniatura10" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura11.png" alt="miniatura11" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura12.png" alt="miniatura12" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-        </ol>
-        <button type="button">Mostrar mais</button>
-      </section>
-      <!--ADICIONANDO BOTÃO PAR 'MOSTRAR MAIS', FUNÇÃO NO HOME.JS-->
-      <section class="painel mais-vendidos">
-        <h2>Mais Vendidos</h2>
-        <ol>
-          <!-- coloque vários produtos aqui-->
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura7.png" alt="miniatura7" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura8.png" alt="miniatura8" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura9.png" alt="miniatura9" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura10.png" alt="miniatura10" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura11.png" alt="miniatura11" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura12.png" alt="miniatura12" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura1.png" alt="miniatura1" />
-                <figcaption>Fuzz Cardigan por R$ 129,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <!-- fim do primeiro produto-->
 
-          <!-- coloque mais produtos aqui! -->
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura2.png" alt="miniatura2" />
-                <figcaption>Camiseta Bad to the bone por R$ 35,00</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura3.png" alt="miniatura3" />
-                <figcaption>Cardigan por R$ 69,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura4.png" alt="miniatura4" />
-                <figcaption>Jaqueta de inverno por R$ 159,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura5.png" alt="miniatura5" />
-                <figcaption>Regata azul academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
-          <li>
-            <a href="produto.html">
-              <figure>
-                <img src="img/produtos/miniatura6.png" alt="miniatura6" />
-                <figcaption>Regata rosa de academia por R$ 39,90</figcaption>
-              </figure>
-            </a>
-          </li>
+          <?php endwhile; ?>
         </ol>
         <button type="button">Mostrar mais</button>
       </section>
