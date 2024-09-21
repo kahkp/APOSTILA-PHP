@@ -83,6 +83,31 @@
         </ol>
         <button type="button">Mostrar mais</button>
       </section>
+      <section class="painel mais-vendidos">
+        <h2>Mais vendidos</h2>
+        <ol>
+          <!-- primeiro produto, modificado com php-->
+          <?php 
+          $conexao = mysqli_connect("127.0.0.1", "root", "", "wd43");
+          $dados = mysqli_query($conexao, "SELECT * FROM produtos");
+
+          while ($produto = mysqli_fetch_array($dados)):
+          ?>
+          <li>
+            <a href="produto.php?id=<?= $produto['id'] ?>">
+              <figure>
+                <img src="img/produtos/miniatura<?= $produto['id'] ?>.png" alt="<?= $produto['nome'] ?>" />
+                <figcaption>
+                  <?= $produto['nome'] ?> por  <?= $produto['preco'] ?>
+                </figcaption>
+              </figure>
+            </a>
+          </li>
+
+          <?php endwhile; ?>
+        </ol>
+        <button type="button">Mostrar mais</button>
+      </section>
       <!--ADICIONANDO BOTÃO PAR 'MOSTRAR MAIS'-->
     </div>
     <!-- fim .container .paneis -->

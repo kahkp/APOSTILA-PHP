@@ -84,6 +84,9 @@
           <div class="card mb-3">
             <div class="card-header">
               <h2>Sua compra</h2>
+              <img
+                  src="img/produtos/foto<?= $_POST['id'] ?>-<?= $_POST['cor'] ?>.png" 
+                >
               <dl>
                 <dt>Cor</dt>
                 <dd><?= $_POST['cor'] ?></dd>
@@ -95,36 +98,14 @@
                 <dd><?= $_POST['nome'] ?></dd>
 
                 <dt>Preço</dt>
-                <dd><?= $_POST['preco'] ?></dd>
+                <dd id="preco"><?= $_POST['preco'] ?></dd>
               </dl>
             </div>
           <!-- Depois de acessar o produto e apertar comprar vai dar certinho os trem de php(parametros)!-->
 
             <!--fim .card-header-->
 
-            <div class="card-body">
-              <!--... aqui vai o <d1> que ja temos-->
-              <img
-                src="img/produtos/foto1-verde.png"
-                alt="Fuzzy Cardigan"
-                class="img-thumbnail. mb-3 d-none d-sm-block"
-              />
-              <dl>
-                <dt>Produto</dt>
-                <dd>Fuzzy Cardigan</dd>
-
-                <dt>Cor</dt>
-                <dd>Verde</dd>
-
-                <dt>Tamanho</dt>
-                <dd>40</dd>
-
-                <dt>Preço</dt>
-                <dd id="preco">R$ 129,90</dd>
-              </dl>
-            </div>
-            <!--fim card-body-->
-          </div>
+           
           <!--fim .card mb-3-->
 
           <!-- Código novo! -->
@@ -146,7 +127,7 @@
               <div class="form-group">
                 <label for="total">Total:</label>
                 <output for="qtd preco" id="total" class="form-control">
-                  R$ 129,90
+                  <?= $_POST['preco'] ?> 
                 </output>
               </div>
             </div>

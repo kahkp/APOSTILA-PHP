@@ -39,17 +39,15 @@
               </label>
               <input type="radio" name="cor" value="rosa" id="rosa" />
               <label for="rosa">
-                <img
-                  src="img/produtos/foto1-rosa.png"
-                  alt="Produto na cor rosa"
-                />
+              <img
+                  src="img/produtos/foto<?= $produto['id'] ?>-rosa.png"
+                >
               </label>
               <input type="radio" name="cor" value="azul" id="azul" />
               <label for="azul">
-                <img
-                  src="img/produtos/foto1-azul.png"
-                  alt="Produto na cor azul"
-                />
+              <img
+                  src="img/produtos/foto<?= $produto['id'] ?>-azul.png"
+                >
               </label>
             </fieldset>
             <fieldset class="tamanhos">
@@ -106,6 +104,15 @@
       </div>
     </div>
     <?php include("rodape.php"); ?>
+     <!-- Load Facebook SDK for JavaScript -->
+  <div id="fb-root"></div>
+  
+  <script async defer crossorigin="anonymous" 
+        src="https://connect.facebook.net/en_US/sdk.js#xfbml=1
+             &version={graph-api-version}
+             &appId={your-facebook-app-id}" 
+        nonce="FOKrbAYI">
+  </script>
     <script type="text/javascript" src="js/produto.js"></script>
   </body>
 </html>
